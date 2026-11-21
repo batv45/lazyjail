@@ -1,0 +1,58 @@
+version: 2
+
+project_name: lazyjail
+
+builds:
+  - id: lazyjail
+    main: ./cmd/lazyjail
+    binary: lazyjail
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+      - arm
+    goarm:
+      - "7"
+
+archives:
+  - id: lazyjail
+    formats:
+      - tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
+
+nfpms:
+  - id: lazyjail-deb
+    package_name: lazyjail
+    file_name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
+    formats:
+      - deb
+    maintainer: batv45
+    description: Keyboard-driven terminal UI for managing fail2ban.
+    license: MIT
+    homepage: https://github.com/batv45/lazyjail
+    section: admin
+    priority: optional
+    recommends:
+      - fail2ban
+
+checksum:
+  name_template: checksums.txt
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+
+release:
+  github:
+    owner: batv45
+    name: lazyjail
+  draft: true
