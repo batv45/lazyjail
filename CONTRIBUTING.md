@@ -30,4 +30,4 @@
 
 ## Dokümantasyon
 
-Kod değiştiren her katkı `docs/DEĞİŞİKLİKLER.md` dosyasına tarihli bir madde ekler.
+Kod değiştiren her katkı `docs/DEGISIKLIKLER.md` dosyasına tarihli bir madde ekler.

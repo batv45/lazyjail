@@ -2,6 +2,14 @@
 
 Yeni maddeler en üstte. Biçim: tarih, issue no, ajan, özet.
 
+## 2026-11-25 · TEK-451 · Coder
+
+- Release hattı: `.goreleaser.yaml` (`draft: false`, `prerelease: auto`, sabit asset adları `lazyjail_linux_<arch>.tar.gz` / `lazyjail_<arch>.deb`, arşive LICENSE+README, `install.sh` release asset'i).
+- `.github/workflows/release.yml` (`v*` tag'inde goreleaser); `ci.yml`'e `release-dry-run` işi (goreleaser check + snapshot, shellcheck, `install.sh` snapshot'a karşı). golangci-lint sürümü sabitlendi (v2.1.6).
+- `scripts/install.sh`: mimari seçimi, SHA-256 doğrulama, `/usr/local/bin` kurulumu.
+- README Kurulum bölümü; `docs/releasing.md`.
+- `docs/DEĞİŞİKLİKLER.md` → `docs/DEGISIKLIKLER.md` (Türkçe karaktersiz ad); `make lint` artık `gofmt -s -l`.
+
 ## 2026-11-25 · TEK-450 · Coder
 
 - `internal/ui`: Bubble Tea TUI çekirdeği. Ana ekran (jail listesi, banlı IP'ler, salt okunur config paneli, log şeridi yer tutucusu), ban/unban (çoklu seçim, `U` ile tüm jail'lerden, iki onay), jail start/stop/reload, global reload, `/` arama, `?` yardım, hata ekranları (`errors.Is` ile: kurulu değil, çalışmıyor, izin yok), dar terminal düzeni, periyodik yenileme.

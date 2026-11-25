@@ -24,7 +24,7 @@ fmt:
 
 lint: vet
 	golangci-lint run ./...
-	@test -z "$$(gofmt -l .)" || { echo "gofmt: dosya biçimi hatalı (make fmt)"; gofmt -l .; exit 1; }
+	@test -z "$$(gofmt -s -l .)" || { echo "gofmt: dosya biçimi hatalı (make fmt)"; gofmt -s -l .; exit 1; }
 
 clean:
 	rm -rf bin dist
