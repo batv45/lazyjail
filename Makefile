@@ -3,7 +3,7 @@ PKG     := ./cmd/lazyjail
 VERSION ?= dev
 LDFLAGS := -s -w -X main.version=$(VERSION)
 
-.PHONY: all build test test-race lint fmt vet clean
+.PHONY: all build test test-race lint fmt vet clean demo
 
 all: build test lint
 
@@ -28,3 +28,6 @@ lint: vet
 
 clean:
 	rm -rf bin dist
+
+demo:
+	go run $(PKG) --demo

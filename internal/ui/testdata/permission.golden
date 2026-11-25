@@ -1,0 +1,9 @@
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Socket'e erişim yok                                                                              ┃
+┃                                                                                                  ┃
+┃ socket: permission denied for fail2ban socket                                                    ┃
+┃                                                                                                  ┃
+┃ sudo lazyjail ile ya da lazyjail --sudo ile çalıştırın. (Denemek için: lazyjail --demo)          ┃
+┃                                                                                                  ┃
+┃ r: tekrar dene   q: çık                                                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛

@@ -2,6 +2,18 @@
 
 Yeni maddeler en üstte. Biçim: tarih, issue no, ajan, özet.
 
+## 2026-11-25 · TEK-450 · Coder
+
+- `internal/ui`: Bubble Tea TUI çekirdeği. Ana ekran (jail listesi, banlı IP'ler, salt okunur config paneli, log şeridi yer tutucusu), ban/unban (çoklu seçim, `U` ile tüm jail'lerden, iki onay), jail start/stop/reload, global reload, `/` arama, `?` yardım, hata ekranları (`errors.Is` ile: kurulu değil, çalışmıyor, izin yok), dar terminal düzeni, periyodik yenileme.
+- `internal/ui/keys.go` tek kısayol kaynağı; `theme.go` ANSI 16 renk + `NO_COLOR`/`--no-color`.
+- `internal/f2b/errors.go`: ortak hata değerleri ve `CommandError` (PLAN-MVP §5, birebir).
+- `internal/f2b/mock`: bellek içi Backend (`--demo` ve UI testleri).
+- `cmd/lazyjail`: `--demo`, `--read-only`, `--sudo` (sudo ile yeniden çalıştırma), `--socket`, `--refresh`, `--no-color`, `--version`. Gerçek backend bağlanana kadar `--demo` dışı çalıştırma açıklayıcı mesajla çıkar (TEK-452).
+- Ban kutusunda `SSH_CONNECTION` IP'si uyarısı (iki onay).
+- Testler: `internal/ui` golden (100×30: ana, boş, dar, yardım, 3 hata ekranı) + akış testleri; `cmd` testleri.
+- `make demo`; `docs/keybindings.md`, `docs/permissions.md`, `docs/img/demo.png`, `docs/img/demo-help.png`.
+- Kısıt: `systemctl start fail2ban` kısayolu (`S`) ve kapsayıcı yeniden bağlanma üstel bekleme yok; teatest yerine doğrudan model sürülen golden testler kullanıldı.
+
 ## 2026-11-22 · TEK-192 · CoderAgent
 
 - Public repo iskeleti: Go modülü (`github.com/batv45/lazyjail`), MIT lisansı.
