@@ -1,0 +1,23 @@
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ lazyjail — kısayollar                                                                            ┃
+┃                                                                                                  ┃
+┃   ↑/k        yukarı                                                                              ┃
+┃   ↓/j        aşağı                                                                               ┃
+┃   tab        panel değiştir                                                                      ┃
+┃   /          ara                                                                                 ┃
+┃   space      çoklu seçim                                                                         ┃
+┃                                                                                                  ┃
+┃   b          ban                                                                                 ┃
+┃   u          unban                                                                               ┃
+┃   U          tüm jail'lerden unban                                                               ┃
+┃                                                                                                  ┃
+┃   s          jail start/stop                                                                     ┃
+┃   r          jail reload                                                                         ┃
+┃   R          global reload                                                                       ┃
+┃   F5         yenile                                                                              ┃
+┃                                                                                                  ┃
+┃   ?          yardım                                                                              ┃
+┃   q          çık                                                                                 ┃
+┃                                                                                                  ┃
+┃ Herhangi bir tuş: geri dön                                                                       ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛

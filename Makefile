@@ -3,7 +3,7 @@ PKG     := ./cmd/lazyjail
 VERSION ?= dev
 LDFLAGS := -s -w -X main.version=$(VERSION)
 
-.PHONY: all build test test-race lint fmt vet clean integration
+.PHONY: all build test test-race lint fmt vet clean demo integration
 
 all: build test lint
 
@@ -24,7 +24,7 @@ fmt:
 
 lint: vet
 	golangci-lint run ./...
-	@test -z "$$(gofmt -l .)" || { echo "gofmt: dosya biçimi hatalı (make fmt)"; gofmt -l .; exit 1; }
+	@test -z "$$(gofmt -s -l .)" || { echo "gofmt: dosya biçimi hatalı (make fmt)"; gofmt -s -l .; exit 1; }
 
 # Real fail2ban in Docker: BASE=ubuntu:22.04 | ubuntu:24.04 | debian:12. Needs Docker and root inside the container only.
 BASE ?= ubuntu:24.04
@@ -35,3 +35,6 @@ integration:
 
 clean:
 	rm -rf bin dist
+
+demo:
+	go run $(PKG) --demo

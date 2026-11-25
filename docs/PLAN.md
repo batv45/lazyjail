@@ -335,7 +335,7 @@ lazyjail/
 │   ├── permissions.md            # root/sudo/socket
 │   ├── testing.md
 │   ├── releasing.md
-│   └── DEĞİŞİKLİKLER.md
+│   └── DEGISIKLIKLER.md
 ├── .github/workflows/{ci,integration,release}.yml
 ├── .goreleaser.yaml
 ├── .golangci.yml
