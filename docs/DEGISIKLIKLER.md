@@ -2,6 +2,14 @@
 
 Yeni maddeler en üstte. Biçim: tarih, issue no, ajan, özet.
 
+## 2026-11-25 · TEK-449 · Coder
+
+- fail2ban backend: `internal/f2b/proto` (pickle kodek, `og-rek`), `socket` (ban, unban, durum, config, ignoreip, stop), `execbk` (`start`, `reload`, `fail2ban-regex`), `real` (birleşik `Backend`), `caps.go`, `errors.go`, `internal/validate`.
+- `internal/f2b/fake`: gerçek protokolü konuşan sahte sunucu (hata/gecikme/asılı sunucu enjeksiyonu).
+- Entegrasyon testi: `test/integration` (`-tags integration`), `make integration BASE=...`, `.github/workflows/integration.yml` (ubuntu:22.04, ubuntu:24.04, debian:12).
+- Gerçek sunucuda doğrulandı: `stop <jail>` jail'i siler, `start <jail>` geri getirmez; `StartJail` tam `reload`'a düşer (bkz. `docs/architecture.md`).
+- `docs/architecture.md`, `docs/testing.md`; `scripts/record-pickles.py`.
+
 ## 2026-11-25 · TEK-451 · Coder
 
 - Release hattı: `.goreleaser.yaml` (`draft: false`, `prerelease: auto`, sabit asset adları `lazyjail_linux_<arch>.tar.gz` / `lazyjail_<arch>.deb`, arşive LICENSE+README, `install.sh` release asset'i).
