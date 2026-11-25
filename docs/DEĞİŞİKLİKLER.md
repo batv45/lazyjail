@@ -2,6 +2,10 @@
 
 Yeni maddeler en üstte. Biçim: tarih, issue no, ajan, özet.
 
+## 2026-11-25 · TEK-448 · Lead
+
+- `docs/PLAN-MVP.md`: kalan MVP işleri (A backend, B TUI, R release/kurulum, C log/regex/ignoreip, T v0.1.0 tag), release ve Ubuntu kurulum planı; TEK-187/TEK-192 inceleme bulguları.
+
 ## 2026-11-22 · TEK-192 · CoderAgent
 
 - Public repo iskeleti: Go modülü (`github.com/batv45/lazyjail`), MIT lisansı.

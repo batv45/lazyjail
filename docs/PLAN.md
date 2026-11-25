@@ -289,6 +289,8 @@ F1–F5, F7, F8, F9 (basit), F10, F11 (çalışma anı), yardım ekranı, tema (
 
 ### 10.3 MVP alt issue önerisi
 
+> Güncel hali: [PLAN-MVP.md](PLAN-MVP.md) (TEK-448). Aşağıdaki tablo tarihsel kayıttır.
+
 Sıra: **1 → (2 ∥ 3) → (4 ∥ 5)**. 2 ve 3, §3.2'deki `Backend` arayüzü sayesinde paralel yürür (3 mock ile çalışır).
 
 | # | Başlık | Kapsam | Bitti ölçütü / doğrulama | Ajan | Bağımlılık |
