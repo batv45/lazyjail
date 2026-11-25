@@ -1,0 +1,39 @@
+
+Running tests
+=============
+
+Use   failregex filter file : sshd, basedir: /etc/fail2ban
+Use         maxlines : 1
+Use      datepattern : {^LN-BEG} : Default Detectors
+Use         log file : /tmp/t.log
+Use         encoding : utf-8
+
+
+Results
+=======
+
+Prefregex: 2 total
+|  ^(?P<mlfid>(?:\[\])?\s*(?:<[^.]+\.[^.]+>\s+)?(?:\S+\s+)?(?:kernel:\s?\[ *\d+\.\d+\]:?\s+)?(?:@vserver_\S+\s+)?(?:(?:(?:\[\d+\])?:\s+[\[\(]?sshd(?:\(\S+\))?[\]\)]?:?|[\[\(]?sshd(?:\(\S+\))?[\]\)]?:?(?:\[\d+\])?:?)\s+)?(?:\[ID \d+ \S+\]\s+)?)(?:(?:error|fatal): (?:PAM: )?)?(?P<content>.+)$
+`-
+
+Failregex: 1 total
+|-  #) [# of hits] regular expression
+|   4) [1] ^Failed (?:<F-NOFAIL>publickey</F-NOFAIL>|\S+) for (?P<cond_inv>invalid user )?<F-USER>(?P<cond_user>\S+)|(?(cond_inv)(?:(?! from ).)*?|[^:]+)</F-USER> from <HOST>(?: (?:port \d+|on \S+)){0,2}(?: ssh\d*)?(?(cond_user): |(?:(?:(?! from ).)*)$)
+`-
+
+Ignoreregex: 0 total
+
+Date template hits:
+|- [# of hits] date format
+|  [2] {^LN-BEG}(?:DAY )?MON Day %k:Minute:Second(?:\.Microseconds)?(?: ExYear)?
+`-
+
+Lines: 2 lines, 0 ignored, 1 matched, 1 missed
+[processed in 0.00 sec]
+
+|- Matched line(s):
+|  Nov 25 20:00:01 h sshd[1]: Failed password for root from 192.0.2.5 port 22 ssh2
+`-
+|- Missed line(s):
+|  Nov 25 20:00:02 h sshd[1]: unrelated line
+`-

@@ -1,0 +1,26 @@
+
+Running tests
+=============
+
+Use   failregex line : failed from <HOST>
+Use      single line : x failed from 1.2.3.4
+
+
+Results
+=======
+
+Failregex: 1 total
+|-  #) [# of hits] regular expression
+|   1) [1] failed from <HOST>
+`-
+
+Ignoreregex: 0 total
+
+Date template hits:
+
+Lines: 1 lines, 0 ignored, 1 matched, 0 missed
+[processed in 0.01 sec]
+
+|- Matched line(s):
+|  x failed from 1.2.3.4
+`-

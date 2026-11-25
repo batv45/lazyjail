@@ -1,0 +1,14 @@
+[DEFAULT]
+banaction = dummy
+banaction_allports = dummy
+backend = polling
+bantime = 600
+findtime = 600
+maxretry = 3
+
+[sshd]
+enabled = true
+port = ssh
+filter = sshd
+logpath = /tmp/auth.log
+backend = polling

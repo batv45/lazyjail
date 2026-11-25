@@ -1,0 +1,2 @@
+2026-11-25 20:22:16,568 fail2ban.configreader   [68]: WARNING 'allowipv6' not defined in 'Definition'. Using default one: 'auto'
+2026-11-25 20:22:16,568 fail2ban                [68]: ERROR   Failed during configuration: No section: 'nosuch'
